@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: one
+  delivery_date: 2026-02-11
+  deadline_date: 2026-02-11
+
+two:
+  company: two
+  delivery_date: 2026-02-11
+  deadline_date: 2026-02-11
