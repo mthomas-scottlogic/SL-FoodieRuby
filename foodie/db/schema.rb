@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_11_140139) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_12_120000) do
   create_table "companies", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "name"
@@ -45,6 +45,8 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_11_140139) do
   create_table "menus", force: :cascade do |t|
     t.integer "company_id", null: false
     t.datetime "created_at", null: false
+    t.date "deadline_date"
+    t.date "delivery_date"
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_menus_on_company_id"
   end
@@ -52,8 +54,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_11_140139) do
   create_table "orders", force: :cascade do |t|
     t.integer "company_id", null: false
     t.datetime "created_at", null: false
-    t.date "deadline_date"
-    t.date "delivery_date"
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
     t.index ["company_id"], name: "index_orders_on_company_id"
